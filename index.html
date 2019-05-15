@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Github profile app</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 id="head-title" class="center-align"><img id="logo" src="githublogo.png" alt="logo"> Github search app</h2>
+    <div class="container">
+        <div class="row">
+            <form id="form">
+                <div class="input-field col l8 m12 s12">
+                <input placeholder="Enter repository name..." id="profilesearch" type="text">
+                <label class="active" for="profilesearch">Search repositories:</label>
+                </div>
+                <div class="input-field col l4 m12 s12 center-align">
+                    <button id="searchbtn" type="submit" class="waves-effect waves-light btn" disabled>Search</button>
+                    <button id="favouritebtn" type="button" class="waves-effect waves-light btn red" disabled>Add to favourites <i class="material-icons linkicon">star</i></button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div id="badgesection" class="col l3 m12 center-align">
+                Favourite searches:
+                <div id="badgesarea">
+                    <br>
+                </div>
+            </div>
+            <div id="outputsection" class="col l9 m12 center-align"></div>
+            <div id="pagination" class="right-align"></div>
+        </div>
+                
+    </div>
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>     
+    <script src="script.js"></script>
+</body>
+</html>

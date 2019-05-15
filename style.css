@@ -1,0 +1,122 @@
+body{
+    color: #24292e;
+    background-color: #F6F8FA;
+}
+
+#head-title{
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: #24292e;
+    margin-top: 0;
+    padding: 15px;
+}
+
+#logo{
+    height: 45px;
+}
+
+#searchbtn{
+   background-color: #494d51;
+   margin: 5px;
+}
+
+#favouritebtn{
+    margin: 5px;
+}
+
+/* label color */
+.input-field label {
+color: #24292e !important;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+color:  #24292e !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+border-bottom: 1px solid #24292e !important;
+box-shadow: 0 1px 0 0 #24292e !important;
+}
+/* valid color */
+.input-field input[type=text].valid {
+border-bottom: 1px solid #24292e !important;
+box-shadow: 0 1px 0 0 #24292e !important;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+border-bottom: 1px solid #24292e !important;
+box-shadow: 0 1px 0 0 #24292e !important;
+}
+/* icon prefix focus color */
+/*   .input-field .prefix.active {
+color: #000;
+}  */
+
+#badgesarea{
+    background-color: #fff;
+    border: 1.5px solid rgb(1, 115, 230);
+    border-radius: 5px;
+}
+
+.card{
+    padding: 5px;
+}
+
+.card-title{
+    text-align: left;
+    padding: 5px;
+}
+
+.avatar{
+    height: 125px;
+}
+
+span.badge{
+    color: white;
+    padding-bottom: 3px;
+    float: left;
+    margin: 3px;
+}
+
+.gotos{
+    margin: 5px;
+}
+
+.gotobtn{
+    margin: 3px;
+}
+
+.linkicon {
+    font-size: 14px !important;
+}
+
+.preloader-wrapper{
+    margin-top: 50px;
+}
+
+.pagebutton, .pagebutton:active, .pagebutton:visited, .pagebutton:hover{
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #494d51;
+    margin: 5px;
+}
+
+.addedtoast{
+    background: #4fac50;
+}
+
+.alreadytoast{
+    background: #ffa726;
+}
+
+.deletedtoast{
+    background: #f44336;
+}
+
+
+
+
+
+
+
+
