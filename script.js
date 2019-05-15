@@ -5,25 +5,26 @@ let searchBtn = document.getElementById("searchbtn");
 let outputSection = document.getElementById("outputsection");
 let favouriteBtn = document.getElementById("favouritebtn");
 let favouritesArea = document.getElementById("badgesarea");
+let paginationSection = document.getElementById("pagination");
 let newValue;
 let currentStoredArray = [];
-let paginationSection = document.getElementById("pagination");
+let storedFavourites = [];
 
-
-//event listeners
+ //event listeners
 document.addEventListener("DOMContentLoaded", () => {
-    let storedFavourites = JSON.parse(localStorage.getItem("favourites"));
-    if(storedFavourites !== null){
-    storedFavourites.forEach(fav => {
-        favouritesArea.innerHTML += 
-        `
-        <div class="chip">
-            ${fav}
-            <i class="close material-icons">close</i>
-        </div>
-        `;
-    });
-}}, true);
+    if(localStorage.getItem("favourites") !== null){
+        storedFavourites = JSON.parse(localStorage.getItem("favourites"));
+        storedFavourites.forEach(fav => {
+            favouritesArea.innerHTML += 
+            `
+            <div class="chip">
+                ${fav}
+                <i class="close material-icons">close</i>
+            </div>
+            `;
+        });
+    }
+}, true);
 
 
 form.addEventListener("submit", (e) => {
@@ -134,7 +135,10 @@ async function searchRepos(url = `https://api.github.com/search/repositories?q=$
 function addToFavourite() {
     if(favouriteBtn.disabled == false){
         newValue = input.value;
-        let storedFavourites = JSON.parse(localStorage.getItem("favourites"));
+        if(localStorage.getItem("favourites") !== null){
+            storedFavourites = JSON.parse(localStorage.getItem("favourites"));
+        }
+      
         if(!(storedFavourites.indexOf(newValue) > -1)) {
             favouritesArea.innerHTML += 
             `
@@ -170,7 +174,7 @@ function selectFavourite(e){
 //storage functions
 function storeFavourite(key, newValue){
     let currentContent = localStorage.getItem(key);
-    if(currentContent === null){
+    if(currentContent == null){
         currentStoredArray.push(newValue);
         localStorage.setItem(key, JSON.stringify(currentStoredArray));
     } else if(currentContent !== null) {
