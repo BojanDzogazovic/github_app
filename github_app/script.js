@@ -13,6 +13,7 @@ let paginationSection = document.getElementById("pagination");
 //event listeners
 document.addEventListener("DOMContentLoaded", () => {
     let storedFavourites = JSON.parse(localStorage.getItem("favourites"));
+    if(storedFavourites !== null){
     storedFavourites.forEach(fav => {
         favouritesArea.innerHTML += 
         `
@@ -22,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         `;
     });
-}, true);
+}}, true);
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
